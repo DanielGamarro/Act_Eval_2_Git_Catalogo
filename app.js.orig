@@ -75,7 +75,10 @@ function deleteMovieById(id) {
   movies = movies.filter(m => m.id !== id);
   renderMovies();
 }
-
+function deleteMovieById(id) {
+  movies = movies.filter(m => m.id !== id);
+  renderMovies();
+}
 
 
 function editMovieById(id) {
@@ -121,8 +124,7 @@ movieList.addEventListener("click", (e) => {
 
   if (btn.dataset.action === "edit") {
     editMovieById(id);
-  }
   if (btn.dataset.action === "delete") {
     deleteMovieById(id);
   }
-}); 
+});
